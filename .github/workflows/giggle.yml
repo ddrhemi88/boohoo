@@ -4,70 +4,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-    Analyze_Computers:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.9'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Analyze_Computers
-          run: |
-            echo "Starting Analyze_Computers suite..."
-            pwd
-            sleep 16m
-            echo "Completed successfully!"
-  
-    Audit_Shoes_x64:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.10'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Audit_Shoes_x64
-          run: |
-            echo "Starting Audit_Shoes_x64 suite..."
-            df
-            sleep 13m
-            echo "Completed successfully!"
-  
-    Review_Lay_E2E:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.8'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Review_Lay_E2E
-          run: |
-            echo "Starting Review_Lay_E2E suite..."
-            hostname
-            sleep 17m
-            echo "Completed successfully!"
-  
-    Deploy_Panel_MacOS:
+    Format_InvestmentAccount_Web:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -81,14 +18,98 @@ jobs:
         - name: Install Dependencies
           run: npm ci || npm install
           
-        - name: Run Deploy_Panel_MacOS
+        - name: Run Format_InvestmentAccount_Web
           run: |
-            echo "Starting Deploy_Panel_MacOS suite..."
-            date
+            echo "Starting Format_InvestmentAccount_Web suite..."
+            uptime
             sleep 20m
             echo "Completed successfully!"
   
-    Verify_Port_arm64:
+    Deploy_MoneyMarketAccount:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Deploy_MoneyMarketAccount
+          run: |
+            echo "Starting Deploy_MoneyMarketAccount suite..."
+            date
+            sleep 12m
+            echo "Completed successfully!"
+  
+    Lint_Stall_QA:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.8'
+          
+        - name: Install Dependencies
+          run: pip install -r requirements.txt || true
+          
+        - name: Run Lint_Stall_QA
+          run: |
+            echo "Starting Lint_Stall_QA suite..."
+            ps
+            sleep 16m
+            echo "Completed successfully!"
+  
+    Analyze_System_x64:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.9'
+          
+        - name: Install Dependencies
+          run: pip install -r requirements.txt || true
+          
+        - name: Run Analyze_System_x64
+          run: |
+            echo "Starting Analyze_System_x64 suite..."
+            pwd
+            sleep 12m
+            echo "Completed successfully!"
+  
+    Audit_Tools_Prod:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Audit_Tools_Prod
+          run: |
+            echo "Starting Audit_Tools_Prod suite..."
+            uptime
+            sleep 11m
+            echo "Completed successfully!"
+  
+    Check_Sensor:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -102,245 +123,14 @@ jobs:
         - name: Install Dependencies
           run: pip install -r requirements.txt || true
           
-        - name: Run Verify_Port_arm64
+        - name: Run Check_Sensor
           run: |
-            echo "Starting Verify_Port_arm64 suite..."
-            uptime
-            sleep 15m
-            echo "Completed successfully!"
-  
-    Analyze_Majority:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Analyze_Majority
-          run: |
-            echo "Starting Analyze_Majority suite..."
+            echo "Starting Check_Sensor suite..."
             whoami
-            sleep 20m
+            sleep 10m
             echo "Completed successfully!"
   
-    Compile_Bandwidth:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.8'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Compile_Bandwidth
-          run: |
-            echo "Starting Compile_Bandwidth suite..."
-            who
-            sleep 17m
-            echo "Completed successfully!"
-  
-    Deploy_Ghost_Linux:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Deploy_Ghost_Linux
-          run: |
-            echo "Starting Deploy_Ghost_Linux suite..."
-            history
-            sleep 14m
-            echo "Completed successfully!"
-  
-    Format_Harddrive_Dev:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Format_Harddrive_Dev
-          run: |
-            echo "Starting Format_Harddrive_Dev suite..."
-            whoami
-            sleep 19m
-            echo "Completed successfully!"
-  
-    Deploy_Protocol:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Deploy_Protocol
-          run: |
-            echo "Starting Deploy_Protocol suite..."
-            whoami
-            sleep 19m
-            echo "Completed successfully!"
-  
-    Format_CheckingAccount_Prod:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Format_CheckingAccount_Prod
-          run: |
-            echo "Starting Format_CheckingAccount_Prod suite..."
-            uptime
-            sleep 13m
-            echo "Completed successfully!"
-  
-    Test_Eyebrow:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.9'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Test_Eyebrow
-          run: |
-            echo "Starting Test_Eyebrow suite..."
-            free
-            sleep 12m
-            echo "Completed successfully!"
-  
-    Lint_Meatloaf_QA:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 22
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Lint_Meatloaf_QA
-          run: |
-            echo "Starting Lint_Meatloaf_QA suite..."
-            uptime
-            sleep 14m
-            echo "Completed successfully!"
-  
-    Review_Feed_Staging:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Review_Feed_Staging
-          run: |
-            echo "Starting Review_Feed_Staging suite..."
-            history
-            sleep 14m
-            echo "Completed successfully!"
-  
-    Deploy_Games:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Deploy_Games
-          run: |
-            echo "Starting Deploy_Games suite..."
-            free
-            sleep 18m
-            echo "Completed successfully!"
-  
-    Analyze_Backburn:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 22
-          
-        - name: Install Dependencies
-          run: npm ci || npm install
-          
-        - name: Run Analyze_Backburn
-          run: |
-            echo "Starting Analyze_Backburn suite..."
-            uname
-            sleep 15m
-            echo "Completed successfully!"
-  
-    Review_Harddrive:
+    Build_CreditCardAccount_v2:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -354,14 +144,203 @@ jobs:
         - name: Install Dependencies
           run: pip install -r requirements.txt || true
           
-        - name: Run Review_Harddrive
+        - name: Run Build_CreditCardAccount_v2
           run: |
-            echo "Starting Review_Harddrive suite..."
-            who
+            echo "Starting Build_CreditCardAccount_v2 suite..."
+            uname
+            sleep 13m
+            echo "Completed successfully!"
+  
+    Build_Angle:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Build_Angle
+          run: |
+            echo "Starting Build_Angle suite..."
+            history
+            sleep 10m
+            echo "Completed successfully!"
+  
+    Check_InvestmentAccount_API:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 24
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Check_InvestmentAccount_API
+          run: |
+            echo "Starting Check_InvestmentAccount_API suite..."
+            ls
+            sleep 16m
+            echo "Completed successfully!"
+  
+    Check_AutoLoanAccount_Staging:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Check_AutoLoanAccount_Staging
+          run: |
+            echo "Starting Check_AutoLoanAccount_Staging suite..."
+            id
+            sleep 12m
+            echo "Completed successfully!"
+  
+    Format_Kids_x64:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 24
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Format_Kids_x64
+          run: |
+            echo "Starting Format_Kids_x64 suite..."
+            date
+            sleep 10m
+            echo "Completed successfully!"
+  
+    Test_PersonalLoanAccount_QA:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.11'
+          
+        - name: Install Dependencies
+          run: pip install -r requirements.txt || true
+          
+        - name: Run Test_PersonalLoanAccount_QA
+          run: |
+            echo "Starting Test_PersonalLoanAccount_QA suite..."
+            ls
+            sleep 12m
+            echo "Completed successfully!"
+  
+    Review_Packaging_x64:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Review_Packaging_x64
+          run: |
+            echo "Starting Review_Packaging_x64 suite..."
+            history
+            sleep 19m
+            echo "Completed successfully!"
+  
+    Check_AutoLoanAccount:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 20
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Check_AutoLoanAccount
+          run: |
+            echo "Starting Check_AutoLoanAccount suite..."
+            ls
+            sleep 16m
+            echo "Completed successfully!"
+  
+    Test_AutoLoanAccount_Prod:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: '3.8'
+          
+        - name: Install Dependencies
+          run: pip install -r requirements.txt || true
+          
+        - name: Run Test_AutoLoanAccount_Prod
+          run: |
+            echo "Starting Test_AutoLoanAccount_Prod suite..."
+            whoami
+            sleep 10m
+            echo "Completed successfully!"
+  
+    Lint_Jewelry:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Install Dependencies
+          run: npm ci || npm install
+          
+        - name: Run Lint_Jewelry
+          run: |
+            echo "Starting Lint_Jewelry suite..."
+            uptime
             sleep 11m
             echo "Completed successfully!"
   
-    Check_Lyre:
+    Verify_AutoLoanAccount:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -370,36 +349,15 @@ jobs:
         - name: Setup Python
           uses: actions/setup-python@v5
           with:
-            python-version: '3.9'
+            python-version: '3.10'
           
         - name: Install Dependencies
           run: pip install -r requirements.txt || true
           
-        - name: Run Check_Lyre
+        - name: Run Verify_AutoLoanAccount
           run: |
-            echo "Starting Check_Lyre suite..."
-            who
-            sleep 14m
-            echo "Completed successfully!"
-  
-    Deploy_Kids_Windows:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Deploy_Kids_Windows
-          run: |
-            echo "Starting Deploy_Kids_Windows suite..."
-            date
-            sleep 14m
+            echo "Starting Verify_AutoLoanAccount suite..."
+            ps
+            sleep 13m
             echo "Completed successfully!"
   
