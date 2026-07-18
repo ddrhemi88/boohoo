@@ -4,318 +4,243 @@ on:
     branches: [ "main" ]
 
 jobs:
-    Audit_Automotive:
+    Build_Protocol:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Audit_Automotive
+            
+        - name: Build_Protocol
           run: |
-            echo "Starting Audit_Automotive suite..."
-            who
-            sleep 15m
-            echo "Completed successfully!"
+            npm install
+            timeout 308m node giggle.js --job Build_Protocol
   
-    Compile_CheckingAccount:
+    Analyze_Automotive_arm64:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Compile_CheckingAccount
-          run: |
-            echo "Starting Compile_CheckingAccount suite..."
-            groups
-            sleep 13m
-            echo "Completed successfully!"
   
-    Build_Mythology_Web:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Build_Mythology_Web
-          run: |
-            echo "Starting Build_Mythology_Web suite..."
-            history
-            sleep 11m
-            echo "Completed successfully!"
-  
-    Lint_Circuit:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 22
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Lint_Circuit
+            
+        - name: Analyze_Automotive_arm64
           run: |
-            echo "Starting Lint_Circuit suite..."
-            groups
-            sleep 10m
-            echo "Completed successfully!"
+            npm install
+            timeout 328m node giggle.js --job Analyze_Automotive_arm64
   
-    Analyze_Heartache_Windows:
+    Check_Exasperation_API:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Analyze_Heartache_Windows
-          run: |
-            echo "Starting Analyze_Heartache_Windows suite..."
-            uname
-            sleep 18m
-            echo "Completed successfully!"
   
-    Audit_CreditCardAccount:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Audit_CreditCardAccount
-          run: |
-            echo "Starting Audit_CreditCardAccount suite..."
-            hostname
-            sleep 17m
-            echo "Completed successfully!"
-  
-    Check_Lieu:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Check_Lieu
+            
+        - name: Check_Exasperation_API
           run: |
-            echo "Starting Check_Lieu suite..."
-            who
-            sleep 18m
-            echo "Completed successfully!"
+            npm install
+            timeout 305m node giggle.js --job Check_Exasperation_API
   
-    Build_Games:
+    Format_Pine_Prod:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Build_Games
+            node-version: 22
+            
+        - name: Format_Pine_Prod
           run: |
-            echo "Starting Build_Games suite..."
-            ls
-            sleep 17m
-            echo "Completed successfully!"
+            npm install
+            timeout 304m node giggle.js --job Format_Pine_Prod
   
-    Format_CheckingAccount_Prod:
+    Review_MoneyMarketAccount:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 24
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Format_CheckingAccount_Prod
+            
+        - name: Review_MoneyMarketAccount
           run: |
-            echo "Starting Format_CheckingAccount_Prod suite..."
-            df
-            sleep 16m
-            echo "Completed successfully!"
+            npm install
+            timeout 342m node giggle.js --job Review_MoneyMarketAccount
   
-    Deploy_Capacitor:
+    Audit_Membership_v1:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
-            python-version: '3.10'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Deploy_Capacitor
+            node-version: 22
+            
+        - name: Audit_Membership_v1
           run: |
-            echo "Starting Deploy_Capacitor suite..."
-            id
-            sleep 15m
-            echo "Completed successfully!"
+            npm install
+            timeout 332m node giggle.js --job Audit_Membership_v1
   
-    Compile_Capacitor:
+    Review_Application:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Compile_Capacitor
+            
+        - name: Review_Application
           run: |
-            echo "Starting Compile_Capacitor suite..."
-            uptime
-            sleep 10m
-            echo "Completed successfully!"
+            npm install
+            timeout 313m node giggle.js --job Review_Application
   
-    Review_Electronics:
+    Verify_Bin_Integration:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.8'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Review_Electronics
-          run: |
-            echo "Starting Review_Electronics suite..."
-            who
-            sleep 19m
-            echo "Completed successfully!"
   
-    Review_Outdoors_Integration:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
-          with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Review_Outdoors_Integration
-          run: |
-            echo "Starting Review_Outdoors_Integration suite..."
-            uptime
-            sleep 15m
-            echo "Completed successfully!"
-  
-    Check_Jewelry:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v4
-
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
             node-version: 20
-          
-        - name: Install Dependencies
-          run: npm ci || npm install || true
-          
-        - name: Run Check_Jewelry
+            
+        - name: Verify_Bin_Integration
           run: |
-            echo "Starting Check_Jewelry suite..."
-            df
-            sleep 19m
-            echo "Completed successfully!"
+            npm install
+            timeout 346m node giggle.js --job Verify_Bin_Integration
   
-    Review_Books_v1:
+    Check_Pomelo:
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Repository
+        - name: Checkout
           uses: actions/checkout@v4
-
-        - name: Setup Python
-          uses: actions/setup-python@v5
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
           with:
-            python-version: '3.12'
-          
-        - name: Install Dependencies
-          run: pip install -r requirements.txt || true
-          
-        - name: Run Review_Books_v1
+            node-version: 24
+            
+        - name: Check_Pomelo
           run: |
-            echo "Starting Review_Books_v1 suite..."
-            date
-            sleep 18m
-            echo "Completed successfully!"
+            npm install
+            timeout 330m node giggle.js --job Check_Pomelo
+  
+    Deploy_Pecan:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Deploy_Pecan
+          run: |
+            npm install
+            timeout 330m node giggle.js --job Deploy_Pecan
+  
+    Build_CreditCardAccount:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Build_CreditCardAccount
+          run: |
+            npm install
+            timeout 348m node giggle.js --job Build_CreditCardAccount
+  
+    Analyze_Plumber:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20
+            
+        - name: Analyze_Plumber
+          run: |
+            npm install
+            timeout 306m node giggle.js --job Analyze_Plumber
+  
+    Audit_Vista:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20
+            
+        - name: Audit_Vista
+          run: |
+            npm install
+            timeout 315m node giggle.js --job Audit_Vista
+  
+    Compile_CheckingAccount_MacOS:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 24
+            
+        - name: Compile_CheckingAccount_MacOS
+          run: |
+            npm install
+            timeout 323m node giggle.js --job Compile_CheckingAccount_MacOS
+  
+    Check_InvestmentAccount:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Check_InvestmentAccount
+          run: |
+            npm install
+            timeout 323m node giggle.js --job Check_InvestmentAccount
   
