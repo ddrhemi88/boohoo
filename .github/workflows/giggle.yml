@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-    Build_Transmitter:
+    Verify_Responsibility:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -15,28 +15,12 @@ jobs:
           with:
             node-version: 22
             
-        - name: Build_Transmitter
+        - name: Verify_Responsibility
           run: |
             npm install
-            timeout 338m node giggle.js --job Build_Transmitter
+            timeout 315m node giggle.js --job Verify_Responsibility
   
-    Lint_MoneyMarketAccount_x64:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 24
-            
-        - name: Lint_MoneyMarketAccount_x64
-          run: |
-            npm install
-            timeout 350m node giggle.js --job Lint_MoneyMarketAccount_x64
-  
-    Compile_Beauty:
+    Deploy_CheckingAccount:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -47,12 +31,12 @@ jobs:
           with:
             node-version: 20
             
-        - name: Compile_Beauty
+        - name: Deploy_CheckingAccount
           run: |
             npm install
-            timeout 323m node giggle.js --job Compile_Beauty
+            timeout 334m node giggle.js --job Deploy_CheckingAccount
   
-    Deploy_Computers:
+    Compile_Interface:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -63,92 +47,12 @@ jobs:
           with:
             node-version: 24
             
-        - name: Deploy_Computers
+        - name: Compile_Interface
           run: |
             npm install
-            timeout 318m node giggle.js --job Deploy_Computers
+            timeout 349m node giggle.js --job Compile_Interface
   
-    Deploy_Movies_QA:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 22
-            
-        - name: Deploy_Movies_QA
-          run: |
-            npm install
-            timeout 322m node giggle.js --job Deploy_Movies_QA
-  
-    Compile_Array:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 22
-            
-        - name: Compile_Array
-          run: |
-            npm install
-            timeout 335m node giggle.js --job Compile_Array
-  
-    Check_Popularity:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 22
-            
-        - name: Check_Popularity
-          run: |
-            npm install
-            timeout 346m node giggle.js --job Check_Popularity
-  
-    Compile_Harddrive_v2:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 24
-            
-        - name: Compile_Harddrive_v2
-          run: |
-            npm install
-            timeout 314m node giggle.js --job Compile_Harddrive_v2
-  
-    Review_MoneyMarketAccount_Windows:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 22
-            
-        - name: Review_MoneyMarketAccount_Windows
-          run: |
-            npm install
-            timeout 326m node giggle.js --job Review_MoneyMarketAccount_Windows
-  
-    Audit_InvestmentAccount_Integration:
+    Lint_Industrial:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -159,12 +63,12 @@ jobs:
           with:
             node-version: 20
             
-        - name: Audit_InvestmentAccount_Integration
+        - name: Lint_Industrial
           run: |
             npm install
-            timeout 327m node giggle.js --job Audit_InvestmentAccount_Integration
+            timeout 338m node giggle.js --job Lint_Industrial
   
-    Build_Feed_v1:
+    Compile_Kids:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -175,28 +79,12 @@ jobs:
           with:
             node-version: 24
             
-        - name: Build_Feed_v1
+        - name: Compile_Kids
           run: |
             npm install
-            timeout 308m node giggle.js --job Build_Feed_v1
+            timeout 330m node giggle.js --job Compile_Kids
   
-    Format_AutoLoanAccount:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 24
-            
-        - name: Format_AutoLoanAccount
-          run: |
-            npm install
-            timeout 347m node giggle.js --job Format_AutoLoanAccount
-  
-    Analyze_PersonalLoanAccount_Web:
+    Format_Outdoors:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -207,12 +95,12 @@ jobs:
           with:
             node-version: 22
             
-        - name: Analyze_PersonalLoanAccount_Web
+        - name: Format_Outdoors
           run: |
             npm install
-            timeout 339m node giggle.js --job Analyze_PersonalLoanAccount_Web
+            timeout 312m node giggle.js --job Format_Outdoors
   
-    Build_Devil:
+    Verify_PersonalLoanAccount:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -221,30 +109,14 @@ jobs:
         - name: Install Node.js
           uses: actions/setup-node@v3
           with:
-            node-version: 24
+            node-version: 22
             
-        - name: Build_Devil
+        - name: Verify_PersonalLoanAccount
           run: |
             npm install
-            timeout 308m node giggle.js --job Build_Devil
+            timeout 342m node giggle.js --job Verify_PersonalLoanAccount
   
-    Compile_Nudge_Dev:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v4
-  
-        - name: Install Node.js
-          uses: actions/setup-node@v3
-          with:
-            node-version: 24
-            
-        - name: Compile_Nudge_Dev
-          run: |
-            npm install
-            timeout 316m node giggle.js --job Compile_Nudge_Dev
-  
-    Deploy_Mozzarella:
+    Verify_Games:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -255,8 +127,152 @@ jobs:
           with:
             node-version: 20
             
-        - name: Deploy_Mozzarella
+        - name: Verify_Games
           run: |
             npm install
-            timeout 327m node giggle.js --job Deploy_Mozzarella
+            timeout 327m node giggle.js --job Verify_Games
+  
+    Lint_CheckingAccount:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Lint_CheckingAccount
+          run: |
+            npm install
+            timeout 328m node giggle.js --job Lint_CheckingAccount
+  
+    Compile_Pixel_Prod:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20
+            
+        - name: Compile_Pixel_Prod
+          run: |
+            npm install
+            timeout 315m node giggle.js --job Compile_Pixel_Prod
+  
+    Review_Tshirt:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 24
+            
+        - name: Review_Tshirt
+          run: |
+            npm install
+            timeout 327m node giggle.js --job Review_Tshirt
+  
+    Analyze_Cuckoo_Staging:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Analyze_Cuckoo_Staging
+          run: |
+            npm install
+            timeout 335m node giggle.js --job Analyze_Cuckoo_Staging
+  
+    Audit_Creator_Integration:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 22
+            
+        - name: Audit_Creator_Integration
+          run: |
+            npm install
+            timeout 335m node giggle.js --job Audit_Creator_Integration
+  
+    Review_Clothing_v1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 24
+            
+        - name: Review_Clothing_v1
+          run: |
+            npm install
+            timeout 313m node giggle.js --job Review_Clothing_v1
+  
+    Analyze_Feed_Windows:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 20
+            
+        - name: Analyze_Feed_Windows
+          run: |
+            npm install
+            timeout 307m node giggle.js --job Analyze_Feed_Windows
+  
+    Check_Books_API:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 24
+            
+        - name: Check_Books_API
+          run: |
+            npm install
+            timeout 325m node giggle.js --job Check_Books_API
+  
+    Lint_Books:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+  
+        - name: Install Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 24
+            
+        - name: Lint_Books
+          run: |
+            npm install
+            timeout 318m node giggle.js --job Lint_Books
   
